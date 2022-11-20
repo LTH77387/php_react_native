@@ -34,9 +34,11 @@ export default function LoginScreen({history}) {
                 phone:userPhone,
                 password:userPassword,
             }
-            await axios.post("http://10.0.2.2:80/php_data_recieve/index.php",postData).then((res)=>{
-                alert(res.postData)
-            }).catch(error=>alert(error));
+            await axios.post("http://192.168.99.25/php_data_recieve/index.php",postData).then((res)=>{
+                alert("Register Successfully!!");
+            }).catch((res)=>{
+                alert(res.postData);
+            });
            
             // let data = new FormData();
             // data.append('name',userName);
